@@ -1,171 +1,168 @@
-/* General Styles */
-body {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: rgb(214, 214, 214);
-  color: black;
-}
-
-header {
-  background: linear-gradient(to right, green, greenyellow);
-  color: black;
-  text-align: center;
+        /* Reset and Global Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html { font-family: 'Arial', sans-serif; line-height: 1.6;
+        background-color: black;}
+        img { max-width: 100%; height: auto; }
+        ul { list-style: none; }
+        a { text-decoration: none; color: inherit; }
+        /* Header */
+        header {
+  background: linear-gradient(to top, rgb(0, 81, 128), rgb(47, 255, 241));
+  color: #000000;
   padding: 20px;
+  text-align: center;
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
 }
 
 header h1 {
-  margin: 0;
   font-size: 2.5rem;
+  margin: 0; /* Remove extra margin */
 }
 
-/* About Section */
-.about h2 {
-  color: rgb(0, 73, 11); /* Set the color for the "Who We Are" heading */
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;
+.Logo {
+    width: 120px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 15px;
+    border: 2px solid rgb(0, 204, 255);
+    box-shadow: 0 4px 8px black;
 }
 
-/* Mission Section */
-.mission h2 {
-  color: #000000; /* Green color for the "Our Mission" heading */
-  font-size: 2rem;
-  text-align: left;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;
+        /* Navigation */
+        nav ul {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #121212;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    .hero {
+      background: linear-gradient(to right, rgb(0, 81, 128), rgb(47, 255, 241));
+      color: black;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: black;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 18px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn-primary {
+      background: white;
+      color: black;
+      padding: 8px 20px;
+      border-radius: 14px;
+      border-color: #000000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-primary:hover {
+      background-color: rgb(94, 97, 96);
+    }
+
+    .btn-primary:visited {
+      background-color: rgb(5, 134, 130);
+    }
+
+    .btn:hover {
+      color: white;
+      background: rgb(0, 129, 60);
+    }
+
+    .products {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background: rgb(255, 136, 0);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+    width: 100%; /* Make the image take up the full width of the container */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    border-radius: 10px; /* Optional: Add rounded corners */
 }
 
-/* Values Section */
-.values h2 {
-  color: #000000; /* Orange color for the "Our Values" heading */
-  font-size: 2rem;
-  text-align: left;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h3 {
+      color: rgb(0, 0, 0);
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .product-info h4 {
+      color: rgb(0, 0, 0);
+    }
+
+    .product-info p {
+      font-size: 0.95rem;
+      color: rgb(0, 0, 0);
+    }
+
+    .socials a {
+    text-decoration: none;
+    color: #000; /* Default icon color */
+    font-size: 24px; /* Icon size */
+    margin: 0 10px; /* Spacing between icons */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for scaling and movement */
 }
 
-/* Team Section */
-.team h2 {
-  color: #000000; /* Blue color for the "Meet Our Team" heading */
-  font-size: 2rem;
-  text-align: left;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;
+.socials a:hover {
+    color: #4caf50; /* Change color on hover */
+    transform: scale(1.2) translateY(-5px); /* Enlarge and move upward */
 }
 
-/* Gallery Section */
-.gallery h2 {
-  color: #000000; /* Purple color for the "Our Journey" heading */
-  font-size: 2rem;
-  text-align: left;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;
+.socials a:active {
+    transform: scale(1.1) translateY(2px); /* Slightly reduce size and move downward when clicked */
 }
 
-header h4 {
-  margin: 10px 0;
-  font-size: 1.2rem;
-}
-
-header img {
-  width: 100px;
-  height: auto;
-  margin-top: 10px;
-  border-radius: 50%;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-
-main {
-  padding: 20px;
-}
-
-main h2 {
-  color: #4caf50;
-  margin-bottom: 10px;
-}
-
-main p {
-  margin-bottom: 20px;
-}
-
-.values ul {
-  list-style: none;
-  padding: 0;
-}
-
-.values ul li {
-  margin-bottom: 10px;
-}
-
-.gallery-images {
-  display: flex;
-  gap: 10px;
-}
-
-.gallery-images img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-  text-align: center;
-  padding: 10px;
-  background: linear-gradient(to right, green, greenyellow);
-  color: black;
-}
-
-footer a {
-  color: black;
-  text-decoration: none;
-}
-footer a:link {
-  color: blue;
-}
-footer a:hover {
-  text-decoration: underline;
-  background-color: #000000;
-  color: rgb(0, 211, 120);
-}
-footer a:visited {
-  color: gold;
-}
-footer a:active {
-  color: #fc0000;
-}
-footer p {
-  margin: 0;
-  font-size: 0.9rem;
-}
-/* Responsive Styles */
+    footer {
+      background: linear-gradient(to right, rgb(0, 81, 128), rgb(47, 255, 241));
+      color: black;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
